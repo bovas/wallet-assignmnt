@@ -12,5 +12,5 @@ import com.ab.wallet.rest.domain.TransactionResponse;
  */
 public interface WalletService {
 	
-	TransactionResponse performTransaction(TransactionRequest request);
+	TransactionResponse performTransaction(TransactionRequest request) throws Exception;
 }

@@ -1,14 +1,38 @@
 package com.ab.wallet.rest.domain;
 
+import org.springframework.lang.NonNull;
+
 /**
- * @author w615250
+ * @author Bovas
  *
  */
 public class TransactionRequest {
 
+	@NonNull
 	private String transactionId;
+	
+	@NonNull
 	private String transactionType;
+	
+	@NonNull
 	private Double transactionAmount;
+
+	@NonNull
+	private long playerId;
+	
+	/**
+	 * @return the playerId
+	 */
+	public long getPlayerId() {
+		return playerId;
+	}
+
+	/**
+	 * @param playerId the playerId to set
+	 */
+	public void setPlayerId(long playerId) {
+		this.playerId = playerId;
+	}
 
 	/**
 	 * @return the transactionId
