@@ -53,5 +53,11 @@ public class PlayerAccount {
 	 */
 	public void setCurrentBalance(Double currentBalance) {
 		this.currentBalance = currentBalance;
-	}		
+	}
+	
+	@Override
+	public String toString() {
+		return "PlayerAccount [playerId=" + playerId + ", playerName=" + playerName + ", currentBalance="
+				+ currentBalance + "]";
+	}	
 }

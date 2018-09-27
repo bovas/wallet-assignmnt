@@ -2,7 +2,9 @@ package com.ab.wallet.rest.domain;
 
 import java.util.UUID;
 
-import org.springframework.lang.NonNull;
+import javax.validation.constraints.NotNull;
+
+
 
 /**
  * @author Bovas
@@ -10,16 +12,16 @@ import org.springframework.lang.NonNull;
  */
 public class TransactionRequest {
 
-	@NonNull
+	@NotNull
 	private UUID transactionId;
 	
-	@NonNull
+	@NotNull
 	private String transactionType;
 	
-	@NonNull
+	@NotNull
 	private Double transactionAmount;
 
-	@NonNull
+	@NotNull
 	private long playerId;
 	
 	/**
