@@ -1,5 +1,7 @@
 package com.ab.wallet.rest.domain;
 
+import java.util.UUID;
+
 import org.springframework.lang.NonNull;
 
 /**
@@ -9,7 +11,7 @@ import org.springframework.lang.NonNull;
 public class TransactionRequest {
 
 	@NonNull
-	private String transactionId;
+	private UUID transactionId;
 	
 	@NonNull
 	private String transactionType;
@@ -37,14 +39,14 @@ public class TransactionRequest {
 	/**
 	 * @return the transactionId
 	 */
-	public String getTransactionId() {
+	public UUID getTransactionId() {
 		return transactionId;
 	}
 
 	/**
 	 * @param transactionId the transactionId to set
 	 */
-	public void setTransactionId(String transactionId) {
+	public void setTransactionId(UUID transactionId) {
 		this.transactionId = transactionId;
 	}
 

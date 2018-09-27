@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class PlayerAccount {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long playerId;
 	private String playerName;
 	private double currentBalance;

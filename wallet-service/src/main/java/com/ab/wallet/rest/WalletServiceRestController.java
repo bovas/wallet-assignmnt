@@ -25,7 +25,7 @@ public class WalletServiceRestController {
 	private WalletService walletService;
 	
 	@PostMapping("/transaction/add")
-	public TransactionResponse performTransaction(@RequestBody TransactionRequest request) {
-		return null;
+	public TransactionResponse performTransaction(@RequestBody TransactionRequest request) throws Exception {
+		return walletService.performTransaction(request);
 	}
 }
