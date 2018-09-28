@@ -9,6 +9,7 @@ import java.util.UUID;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ab.wallet.config.Constants;
 import com.ab.wallet.entities.PlayerAccount;
@@ -131,7 +132,8 @@ public class WalletServiceImpl implements WalletService {
 	 * @return
 	 * @throws PlayerNotFoundException
 	 */
-	private boolean savePlayerAccount(PlayerAccount account, double currentBalance) throws PlayerNotFoundException {
+	@Transactional
+	public boolean savePlayerAccount(PlayerAccount account, double currentBalance) throws PlayerNotFoundException {
 		account.setCurrentBalance(currentBalance);
 		playerRepository.save(account);
 		return retrievePlayerAccount(account.getPlayerId()).getCurrentBalance() == currentBalance;
@@ -150,7 +152,8 @@ public class WalletServiceImpl implements WalletService {
 	 * @param request
 	 * @param account
 	 */
-	private void saveTransactionLog(TransactionRequest request, PlayerAccount account) {
+	@Transactional
+	public void saveTransactionLog(TransactionRequest request, PlayerAccount account) {
 		TransactionLog transactionLog = new TransactionLog();
 		transactionLog.setPlayerId(account.getPlayerId());
 		transactionLog.setTransactionId(request.getTransactionId());
