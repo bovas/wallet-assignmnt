@@ -39,7 +39,7 @@ PLAYER_ID  	PLAYER_NAME  	CURRENT_BALANCE
 5	        Edvin           50.0
 
 ```
-4. Sample data can be modified by logging into [console](http://localhost:h2-console) and connecting to the schema `jdbc:h2:mem:testdb`
+4. Sample data can be modified by logging into [console](http://localhost:8080/h2-console) and connecting to the schema `jdbc:h2:mem:testdb`
 5. Transaction id in the request payload should be a UUID(Globally Unique id), it can be generated from this [site](https://www.uuidgenerator.net/version4)
 
 ### Appendix
