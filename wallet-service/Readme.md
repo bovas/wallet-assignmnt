@@ -10,7 +10,7 @@ git clone https://github.com/bovas/wallet-assignmnt.git
 1. Ensure Java development kit and runtime are installed and JAVA_HOME path is set in the System.
 2. Navigate to the project path
    ```
-   cd wallet-assignment/wallet-service
+   cd wallet-assignmnt/wallet-service
    ```
 3. Run the below command
    ```
